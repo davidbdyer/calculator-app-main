@@ -34,6 +34,10 @@ h1 {
     width: 450px;
 }
 
+.screen label {
+    display: none;
+}
+
 #screen {
     width: 100%;
     height: 100px;

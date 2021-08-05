@@ -7,11 +7,11 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="theme1.css" id="theme" class="alternative">
-	<title>Frontend Mentor | Calculator app</title>
+	<title>Calculator App</title>
 </head>
 
 <body>
-	<div class="primary-container">
+	<main class="primary-container">
 		<div id="title-bar">
 			<h1>calc</h1>
 			<form id="theme-selector">
@@ -33,6 +33,7 @@
 		</div>
 		<div class="screen">
 			<form name="calcDisplay">
+				<label for="screen">screen</label>
 				<input type="text" name="answer" readonly id="screen">
 			</form>
 		</div>
@@ -59,7 +60,7 @@
 					onclick="document.calcDisplay.answer.value= eval(calcDisplay.answer.value)">=</button>
 			</div>
 		</div>
-	</div>
+	</main>
 	<script src="theme-switcher.js"></script>
 	<script src="calc.js"></script>
 	<div class="attribution">
