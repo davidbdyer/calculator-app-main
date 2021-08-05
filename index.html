@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="theme1.css" id="theme" class="alternative">
+	<title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body>
+	<div class="primary-container">
+		<div id="title-bar">
+			<h1>calc</h1>
+			<form id="theme-selector">
+				<div id="theme-labels">
+					<label for="theme-3">3</label>
+					<label for="theme-2">2</label>
+					<label for="theme-1">1</label>
+				</div>
+				<div id="theme-radio-btn">
+					<input class="theme-radio" type="radio" name="theme" id="theme-1"
+						onclick="setStyleSheet('theme1.css')" checked>
+					<input class="theme-radio" type="radio" name="theme" id="theme-2"
+						onclick="setStyleSheet('theme2.css')">
+					<input class="theme-radio" type="radio" name="theme" id="theme-3"
+						onclick="setStyleSheet('theme3.css')">
+				</div>
+			</form>
+			<h2 id="theme-h2">THEME</h2>
+		</div>
+		<div class="screen">
+			<form name="calcDisplay">
+				<input type="text" name="answer" readonly id="screen">
+			</form>
+		</div>
+		<div class="cal-body">
+			<div class="btn-container">
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='7'">7</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='8'">8</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='9'">9</button>
+				<button class="del" onclick="del()">DEL</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='4'">4</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='5'">5</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='6'">6</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='+'">+</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='1'">1</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='2'">2</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='3'">3</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='-'">-</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='.'">.</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='0'">0</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='/'">/</button>
+				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='*'">x</button>
+				<button class="reset" onclick="document.calcDisplay.answer.value=''">RESET</button>
+				<button class="equal"
+					onclick="document.calcDisplay.answer.value= eval(calcDisplay.answer.value)">=</button>
+			</div>
+		</div>
+	</div>
+	<script src="theme-switcher.js"></script>
+	<script src="calc.js"></script>
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="#">Your Name Here</a>.
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+:root {
+    /* Theme 3 */
+    --theme-background: hsl(268, 75%, 9%);
+    --theme-toggle-key-background: hsl(268, 71%, 12%);
+    --theme-screen-background: hsl(268, 71%, 12%);
+    --theme-del-reset-key: hsl(281, 89%, 26%);
+    --theme-del-reset-key-shadow: hsl(285, 91%, 52%);
+    --theme-equal-key-toggle: hsl(176, 100%, 44%);
+    --theme-equal-key-shadow: hsl(177, 92%, 70%);
+    --theme-num-op-keys: hsl(268, 47%, 21%);
+    --theme-num-op-keys-shadow: hsl(290, 70%, 36%);
+    --theme-num-op-text: hsl(52, 100%, 62%);
+    --theme-del-reset-text: hsl(0, 0%, 100%);
+    --theme-equal-text: hsl(0, 0%, 0%);
+    --theme-screen-titlebar-text: var(--theme-num-op-text);
+}
