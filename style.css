@@ -62,6 +62,10 @@ button {
     font-size: 32px;
 }
 
+button:active {
+    background: darkgrey;
+}
+
 .btn-container {
     display: flex;
     width: 450px;
@@ -94,7 +98,6 @@ button {
     background-color: var(--theme-num-op-keys);
     box-shadow: 0px 3px 0px 0px var(--theme-num-op-keys-shadow);
 }
-
 
 /*------- THEME SELECTOR -------*/
 
