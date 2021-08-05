@@ -63,7 +63,7 @@ button {
 }
 
 button:active {
-    background: darkgrey;
+    background-color: var(--theme-toggle-key-background);
 }
 
 .btn-container {
