@@ -73,6 +73,7 @@ button:active {
     background-color: var(--theme-toggle-key-background);
     padding: 10px 5px;
     margin: 15px 0;
+    border-radius: 7px;
 }
 
 .reset,
