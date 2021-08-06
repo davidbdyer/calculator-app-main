@@ -10,26 +10,28 @@ const printToScreen = function () {
 }
 
 const del = function () {
-    if (deleteInputs.includes(inputBuffer) === true && calcDisplay.screen.value !== '') {
+    if (deleteInputs.includes(inputBuffer) && calcDisplay.screen.value !== '') {
         const value = document.getElementById('screen').value;
         document.getElementById('screen').value = value.substr(0, value.length - 1);
     }
 }
 
 const operatorInput = function () {
-    if ( operators.includes(inputBuffer) === true && operators.includes(calcDisplay.screen.value.slice(-1)) === false ) {
+    if ( inputBuffer === 'x') {
+        inputBuffer = '*';
+    }
+    if ( operators.includes(inputBuffer) && !(operators.includes(calcDisplay.screen.value.slice(-1)) ) &&  (calcDisplay.screen.value !== '') ) {
         printToScreen();
     };
-
 }
 
 const numberInput = function () {
-    if ( numbers.includes(inputBuffer) === true )
+    if ( numbers.includes(inputBuffer) )
     printToScreen();
 }
 
 const equalInput = function () {
-    if ( equalInputs.includes(inputBuffer) === true && calcDisplay.screen.value !== '') {
+    if ( equalInputs.includes(inputBuffer) && calcDisplay.screen.value !== '') {
         calcDisplay.screen.value = eval(calcDisplay.screen.value)
     }
 }
