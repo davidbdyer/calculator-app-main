@@ -42,7 +42,7 @@
 				<button class="num-btn-op">7</button>
 				<button class="num-btn-op">8</button>
 				<button class="num-btn-op">9</button>
-				<button class="del" onclick="del()">DEL</button>
+				<button class="del">DEL</button>
 				<button class="num-btn-op">4</button>
 				<button class="num-btn-op">5</button>
 				<button class="num-btn-op">6</button>
@@ -56,12 +56,17 @@
 				<button class="num-btn-op">/</button>
 				<button class="num-btn-op">x</button>
 				<button class="reset" onclick="document.calcDisplay.screen.value=''">RESET</button>
-				<button class="equal" onclick="document.calcDisplay.screen.value = eval(calcDisplay.screen.value)">=</button>
+				<button class="equal">=</button>
 			</div>
 		</div>
 	</main>
 	<script src="theme-switcher.js"></script>
 	<script src="calc.js"></script>
+	<!-- prevents smartzoom on mobile -->
+	<script>document.addEventListener("click", event => {
+		event.preventDefault()
+		event.stopPropagation()
+	  })</script>
 	<footer class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 		Coded by <a href="https://www.daviddyer.me">David Dyer</a>.
