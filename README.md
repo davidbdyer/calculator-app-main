@@ -32,12 +32,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://davidbdeath.github.io/calculator-app-main/)
+- Live Site URL: [Add live site URL here](https://github.com/davidbdeath/calculator-app-main)
 
 ## My process
 I started by planning out how to do the theme switcher first, then put everything into the html and styled it.
 Then i figured out how to use JS to check `prefers-color-scheme` and adjust accordingly.
+Then I disabled smart zoom on ios and did input validation.
 
 ### Built with
 

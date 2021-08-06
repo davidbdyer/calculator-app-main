@@ -12,3 +12,8 @@ const checkPrefersLightMode = function () {
 }
 
 onload = checkPrefersLightMode();
+
+document.addEventListener("dblclick", event => {
+    event.preventDefault()
+    event.stopPropagation()
+  })
