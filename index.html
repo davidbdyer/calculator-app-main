@@ -34,29 +34,29 @@
 		<div class="screen">
 			<form name="calcDisplay">
 				<label for="screen">screen</label>
-				<input type="text" name="screen" readonly id="answer">
+				<input type="text" name="screen" readonly id="screen">
 			</form>
 		</div>
 		<div class="cal-body">
 			<div class="btn-container">
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='7'">7</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='8'">8</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='9'">9</button>
+				<button class="num-btn-op">7</button>
+				<button class="num-btn-op">8</button>
+				<button class="num-btn-op">9</button>
 				<button class="del" onclick="del()">DEL</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='4'">4</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='5'">5</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='6'">6</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='+'">+</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='1'">1</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='2'">2</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='3'">3</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='-'">-</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='.'">.</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='0'">0</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='/'">/</button>
-				<button class="num-btn-op" onclick="document.calcDisplay.answer.value+='*'">x</button>
-				<button class="reset" onclick="document.calcDisplay.answer.value=''">RESET</button>
-				<button class="equal" onclick="document.calcDisplay.answer.value = eval(calcDisplay.answer.value)">=</button>
+				<button class="num-btn-op">4</button>
+				<button class="num-btn-op">5</button>
+				<button class="num-btn-op">6</button>
+				<button class="num-btn-op">+</button>
+				<button class="num-btn-op">1</button>
+				<button class="num-btn-op">2</button>
+				<button class="num-btn-op">3</button>
+				<button class="num-btn-op">-</button>
+				<button class="num-btn-op">.</button>
+				<button class="num-btn-op">0</button>
+				<button class="num-btn-op">/</button>
+				<button class="num-btn-op">x</button>
+				<button class="reset" onclick="document.calcDisplay.screen.value=''">RESET</button>
+				<button class="equal" onclick="document.calcDisplay.screen.value = eval(calcDisplay.screen.value)">=</button>
 			</div>
 		</div>
 	</main>
