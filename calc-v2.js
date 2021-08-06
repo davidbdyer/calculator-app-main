@@ -11,20 +11,6 @@ const printToScreen = function () {
     calcDisplay.screen.value = newString;
 }
 
-const del = function () {
-    if (deleteInputs.includes(inputBuffer) && screenBuffer !== '') {
-       screenBuffer = screenBuffer.toString().substr(0, screenBuffer.length - 1);
-       calcDisplay.screen.value = screenBuffer;
-    }
-}
-
-const reset = function () {
-    if (inputBuffer === 'RESET') {
-        screenBuffer = '';
-        calcDisplay.screen.value = screenBuffer;
-    }
-}
-
 const operatorInput = function () {
     if ( inputBuffer === 'x') {
         inputBuffer = '*';
@@ -40,18 +26,32 @@ const numberInput = function () {
     printToScreen();
 }
 
-const equalInput = function () {
-    if ( equalInputs.includes(inputBuffer) && screenBuffer !== '') {
-        screenBuffer = eval(screenBuffer)
-        calcDisplay.screen.value = screenBuffer;
-    }
-}
-
 const decimalInput = function () {
     const splitArray = screenBuffer.toString().split(/[\*\+\-\/]/);
     const lastArrayElement = splitArray[splitArray.length - 1];
     if ( ['.'].includes(inputBuffer) && !( lastArrayElement.includes('.') ) ) {
         printToScreen();
+    }
+}
+
+const equalInput = function () {
+    if ( equalInputs.includes(inputBuffer) && screenBuffer !== '' ) {
+        screenBuffer = eval(screenBuffer)
+        calcDisplay.screen.value = screenBuffer;
+    }
+}
+
+const del = function () {
+    if ( deleteInputs.includes(inputBuffer) && screenBuffer !== '' ) {
+       screenBuffer = screenBuffer.toString().substr(0, screenBuffer.length - 1);
+       calcDisplay.screen.value = screenBuffer;
+    }
+}
+
+const reset = function () {
+    if ( inputBuffer === 'RESET' || inputBuffer === 'r' ) {
+        screenBuffer = '';
+        calcDisplay.screen.value = screenBuffer;
     }
 }
 
