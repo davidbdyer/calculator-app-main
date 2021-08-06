@@ -3,25 +3,22 @@ const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 const equalInputs = ['Enter', '='];
 const deleteInputs = ['Backspace', 'Delete', 'Clear', 'DEL'];
 let inputBuffer;
-let screenBuffer = '';
 
 const printToScreen = function () {
-    screenBuffer+=inputBuffer;
-    const newString = screenBuffer.replace('*', 'x');
-    calcDisplay.screen.value = newString;
+    calcDisplay.screen.value+=inputBuffer;
+    console.log(calcDisplay.screen.value);
 }
 
 const del = function () {
-    if (deleteInputs.includes(inputBuffer) && screenBuffer !== '') {
-       screenBuffer = screenBuffer.toString().substr(0, screenBuffer.length - 1);
-       calcDisplay.screen.value = screenBuffer;
+    if (deleteInputs.includes(inputBuffer) && calcDisplay.screen.value !== '') {
+        const value = document.getElementById('screen').value;
+        document.getElementById('screen').value = value.substr(0, value.length - 1);
     }
 }
 
 const reset = function () {
     if (inputBuffer === 'RESET') {
-        screenBuffer = '';
-        calcDisplay.screen.value = screenBuffer;
+        calcDisplay.screen.value = '';
     }
 }
 
@@ -29,9 +26,8 @@ const operatorInput = function () {
     if ( inputBuffer === 'x') {
         inputBuffer = '*';
     }
-    const lastChar = screenBuffer.toString().slice(-1);
-    if ( operators.includes(inputBuffer) && ( screenBuffer !== '' ) ) {
-       printToScreen();
+    if ( operators.includes(inputBuffer) && !(operators.includes(calcDisplay.screen.value.slice(-1)) ) &&  (calcDisplay.screen.value !== '') ) {
+        printToScreen();
     };
 }
 
@@ -41,14 +37,14 @@ const numberInput = function () {
 }
 
 const equalInput = function () {
-    if ( equalInputs.includes(inputBuffer) && screenBuffer !== '') {
-        screenBuffer = eval(screenBuffer)
-        calcDisplay.screen.value = screenBuffer;
+    if ( equalInputs.includes(inputBuffer) && calcDisplay.screen.value !== '') {
+        calcDisplay.screen.value = eval(calcDisplay.screen.value)
+        console.log(calcDisplay.screen.value);
     }
 }
 
 const decimalInput = function () {
-    const splitArray = screenBuffer.toString().split(/[\*\+\-\/]/);
+    const splitArray = calcDisplay.screen.value.split(/[\*\+\-\/]/);
     const lastArrayElement = splitArray[splitArray.length - 1];
     if ( ['.'].includes(inputBuffer) && !( lastArrayElement.includes('.') ) ) {
         printToScreen();

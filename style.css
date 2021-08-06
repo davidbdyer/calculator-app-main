@@ -46,6 +46,7 @@ h1 {
     border: 0;
     outline: none;
     border-radius: 7px;
+    padding-inline: 1ch;
 }
 
 button {
