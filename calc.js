@@ -1,7 +1,5 @@
 const operatorKeys = ['+', '-', '*', '/', '.'];
 const numberKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-calcDisplay.answer.value.slice(-2);
-
 
 const del = function () {
     const value = document.getElementById('answer').value;
