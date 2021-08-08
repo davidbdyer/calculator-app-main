@@ -170,6 +170,7 @@ button:active {
     .primary-container {
         transform: scale(.7);
     }
+
     #theme-selector {
         transform: scale(1.5);
         position: relative;

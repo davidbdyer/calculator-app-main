@@ -17,7 +17,8 @@ const operatorInput = function () {
     }
     const lastChar = screenBuffer.toString().slice(-1);
     if ( operators.includes(inputBuffer) && ( screenBuffer !== '' ) && !( operators.includes(lastChar) ) ) {
-        screenBuffer+=inputBuffer;
+        // screenBuffer+=inputBuffer;
+        screenBuffer+=` ${inputBuffer} `;
        printToScreen();
     };
 }
@@ -47,7 +48,8 @@ const equalInput = function () {
 }
 
 const del = function () {
-    if ( deleteInputs.includes(inputBuffer) && screenBuffer !== '' ) {
+    const lastChar = screenBuffer.toString().slice(-1);
+    if ( deleteInputs.includes(inputBuffer) && screenBuffer !== '' && lastChar !== ' ' ) {
        screenBuffer = screenBuffer.toString().substr(0, screenBuffer.length - 1);
        printToScreen();
     }
