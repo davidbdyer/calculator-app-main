@@ -6,7 +6,6 @@ let inputBuffer;
 let screenBuffer = '';
 
 const printToScreen = function () {
-    // screenBuffer+=inputBuffer;
     const newString = screenBuffer.replaceAll('*', 'x');
     calcDisplay.screen.value = newString;
 }
@@ -15,9 +14,8 @@ const operatorInput = function () {
     if ( inputBuffer === 'x') {
         inputBuffer = '*';
     }
-    const lastChar = screenBuffer.toString().slice(-1);
+    const lastChar = screenBuffer.toString().slice(-2,-1);
     if ( operators.includes(inputBuffer) && ( screenBuffer !== '' ) && !( operators.includes(lastChar) ) ) {
-        // screenBuffer+=inputBuffer;
         screenBuffer+=` ${inputBuffer} `;
        printToScreen();
     };
