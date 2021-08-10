@@ -25,7 +25,7 @@ const numberInput = function () {
     if ( numbers.includes(inputBuffer) ) {
         screenBuffer+=inputBuffer;
         printToScreen();
-    }   
+    }
 }
 
 const decimalInput = function () {
@@ -45,11 +45,17 @@ const equalInput = function () {
     }
 }
 
-const del = function () {
+const del = function() {
     const lastChar = screenBuffer.toString().slice(-1);
-    if ( deleteInputs.includes(inputBuffer) && screenBuffer !== '' && lastChar !== ' ' ) {
-       screenBuffer = screenBuffer.toString().substr(0, screenBuffer.length - 1);
-       printToScreen();
+    if (deleteInputs.includes(inputBuffer) && screenBuffer !== '') {
+        if (lastChar === ' ') {
+            screenBuffer = screenBuffer.toString().substr(0, screenBuffer.length - 2);
+            printToScreen();
+        } else {
+            screenBuffer = screenBuffer.toString().substr(0, screenBuffer.length - 1);
+            printToScreen();
+        }
+
     }
 }
 
