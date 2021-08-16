@@ -197,3 +197,13 @@ button:active {
         margin-right: 8em;
     }
 }
+
+@media only screen and (orientation:landscape) {
+      body {
+        /* height: 100vw; */
+        transform: rotate(90deg);
+      }
+      .primary-container {
+          transform: scale(.6);
+      }
+    }
