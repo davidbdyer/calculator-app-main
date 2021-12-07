@@ -16,31 +16,28 @@
 	<main class="primary-container">
 		<div id="title-bar">
 			<h1>calc</h1>
-			<form id="theme-selector">
+			<form aria-hidden="true" id="theme-selector">
 				<div id="theme-labels">
 					<label for="theme-3">3</label>
 					<label for="theme-2">2</label>
 					<label for="theme-1">1</label>
 				</div>
-				<div id="theme-radio-btn">
-					<input class="theme-radio" type="radio" name="theme" id="theme-1"
-						onclick="setStyleSheet('theme1.css')" checked>
-					<input class="theme-radio" type="radio" name="theme" id="theme-2"
-						onclick="setStyleSheet('theme2.css')">
-					<input class="theme-radio" type="radio" name="theme" id="theme-3"
-						onclick="setStyleSheet('theme3.css')">
+				<div aria-hidden="true" id="theme-radio-btn">
+					<input class="theme-radio" type="radio" name="theme" id="theme-1" onclick="setStyleSheet('theme1.css')" checked>
+					<input class="theme-radio" type="radio" name="theme" id="theme-2" onclick="setStyleSheet('theme2.css')">
+					<input class="theme-radio" type="radio" name="theme" id="theme-3" onclick="setStyleSheet('theme3.css')">
 				</div>
 			</form>
-			<h2 id="theme-h2">THEME</h2>
+			<h2 aria-hidden="true" id="theme-h2">THEME</h2>
 		</div>
 		<div class="screen">
-			<form name="calcDisplay">
+			<form aria-label="calculator display" name="calcDisplay">
 				<label for="screen">screen</label>
 				<input type="text" name="screen" readonly id="screen">
 			</form>
 		</div>
 		<div class="cal-body">
-			<div class="btn-container">
+			<div aria-label="calculator buttons" class="btn-container">
 				<button class="num-btn-op">7</button>
 				<button class="num-btn-op">8</button>
 				<button class="num-btn-op">9</button>
