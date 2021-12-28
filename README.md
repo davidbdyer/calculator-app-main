@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://davidbdyer.github.io/calculator-app-main/)
-- Live Site URL: [Add live site URL here](https://github.com/davidbdyer/calculator-app-main)
+- Solution URL: [Git](https://github.com/davidbdeath/calculator-app-main)
+- Live Site URL: [Calculator](https://davidbdeath.github.io/calculator-app-main/)
 
 ## My process
 I started by planning out how to do the theme switcher first, then put everything into the **HTML** and styled it with **CSS**.
